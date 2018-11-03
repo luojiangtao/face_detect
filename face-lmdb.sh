@@ -3,11 +3,11 @@
 # N.B. set the path to the face_48 train + val data dirs
 
 EXAMPLE=/python/face_detect
-DATA=/python/face_detect
+DATA=/python/face_detect/data
 TOOLS=/usr/bin
 
-TRAIN_DATA_ROOT=/python/face_detect/data_lmdb/train/
-VAL_DATA_ROOT=/python/face_detect/data_lmdb/test/
+TRAIN_DATA_ROOT=/python/face_detect/data/train/
+VAL_DATA_ROOT=/python/face_detect/data/val/
 
 # Set RESIZE=true to resize the images to 60 x 60. Leave as false if images have
 # already been resized using another tool.
@@ -42,7 +42,7 @@ GLOG_logtostderr=1 $TOOLS/convert_imageset \
     --shuffle \
     $TRAIN_DATA_ROOT \
     $DATA/train.txt \
-    $EXAMPLE/data_lmdb
+    $EXAMPLE/data_lmdb/face_train_lmdb
 
 echo "Creating val lmdb..."
 
@@ -52,7 +52,7 @@ GLOG_logtostderr=1 $TOOLS/convert_imageset \
     --shuffle \
     $VAL_DATA_ROOT \
     $DATA/val.txt \
-    $EXAMPLE/data_lmdb
+    $EXAMPLE/data_lmdb/face_val_lmdb
 
 echo "Done."
 #Status API Training Shop Blog About
