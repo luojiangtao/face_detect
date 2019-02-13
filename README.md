@@ -1,5 +1,5 @@
 # 人脸检测
-基于caffe 开发的人脸关键点检测
+基于caffe 开发的人脸检测
 - 效果截图
 
 ![效果截图](https://raw.githubusercontent.com/luojiangtao/face_detect/master/1.png)  
